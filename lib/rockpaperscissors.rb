@@ -2,10 +2,22 @@ require 'sinatra/base'
 
 class Rock_Paper_Scissors < Sinatra::Base
 
-	
+  set :views, Proc.new{File.join(root, '..', "views")}
+  
+  enable :sessions
+
+  
+
   get '/' do
-    'Hello Rock_Paper_Scissors!'
+    erb :index
   end
+
+  get '/game/:type' do
+  	session[:type] = params[:type]
+  	erb :new_player
+  end
+
+
 
 
 
