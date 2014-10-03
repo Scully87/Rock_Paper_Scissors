@@ -1,4 +1,4 @@
-
+====================================================
 The task is to create a Rock,Paper,Scissors game to be playable on the web.
 
 The game will contain the following features :
@@ -20,3 +20,4 @@ Use the special rules (http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-S
 ~ Scissors beats Paper
 ~ Paper beats Rock
 
+====================================================
