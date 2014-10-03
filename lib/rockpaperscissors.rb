@@ -15,13 +15,13 @@ class Rock_Paper_Scissors < Sinatra::Base
   	erb :new_player
   end
 
-  post '/register' do 
-  	session[:player] = Player.new(params[:name])
-    GAME.add session[:player]
-    GAME.add computer if single_player_mode?
-  	redirect to '/play' if single_player_mode? || GAME.has_enough_players?
-    redirect to '/waiting'
-  end
+  # post '/register' do 
+  # 	session[:player] = Player.new(params[:name])
+  #   GAME.add session[:player]
+  #   GAME.add computer if single_player_mode?
+  # 	redirect to '/play' if single_player_mode? || GAME.has_enough_players?
+  #   redirect to '/waiting'
+  # end
 
 
 
