@@ -1,7 +1,7 @@
 Feature: Playing in Single Player Mode
 		 In order to play rock paper scissors single play mode
 		 As a player
-		 I need to pay vs the computer
+		 I need to play vs the computer
 
 Scenario: A player can register
 		  Given i am on the home page
