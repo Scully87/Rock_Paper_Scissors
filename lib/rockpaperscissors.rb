@@ -6,6 +6,8 @@ class Rock_Paper_Scissors < Sinatra::Base
 
   enable :sessions
 
+  GAME = Game.new
+
   get '/' do
     erb :index
   end
