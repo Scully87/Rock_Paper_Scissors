@@ -23,7 +23,7 @@ Change the game so that two players can face each other
 === Bonus 2: Rock,Paper,Scissors,Spock,Lizard ===
 -------------------------------------------------
 
-Use the special rules (http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock)
+Use the <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock">special rules</a>
 
 ----------------------------------------------
 ============== Basic Rules ===================
