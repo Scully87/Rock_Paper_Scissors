@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require 'game'
+require 'player'
 
 class Rock_Paper_Scissors < Sinatra::Base
 
