@@ -1,7 +1,7 @@
 =======================================================================================
-The task is to create a Rock,Paper,Scissors game to be playable on the web.
+<h1>The task is to create a Rock,Paper,Scissors game to be playable on the web.</h1>
 
-The game will contain the following features :
+<strong>The game will contain the following features :</strong>
   
   ~ The player has to enter their name before the game
 
