@@ -1,11 +1,11 @@
-require 'player'
+# require 'player'
 
-describe Player do 
+# describe Player do 
 
-	let(:player) { Player.new }
+# 	let(:player) { Player.new }
 
-  it "has a name" do
-		expect(player.name).to eq(@name)
-  end
+#   it "has a name" do
+# 		expect(player.name).to eq(@name)
+#   end
 
-end
+# end
