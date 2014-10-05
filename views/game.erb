@@ -1,5 +1,7 @@
 <% if @name %>
+	<h2> Single Player Game </h2>
 	<h4><%= @name %>! vs Computer AI!</h4>
 <% else @name1 || @name2 %>
+	<h2> Vs Game </h2>
 	<h4><%= @name1 %>! vs <%= @name2 %>!</h4>
 <% end %>

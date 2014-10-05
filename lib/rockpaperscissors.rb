@@ -1,6 +1,6 @@
-require 'sinatra/base'
 # require 'game'
 # require 'player'
+require 'sinatra/base'
 
 class Rock_Paper_Scissors < Sinatra::Base
 
@@ -25,18 +25,22 @@ class Rock_Paper_Scissors < Sinatra::Base
   	erb :player2
    end
 
-  post '/register' do
+  post '/register_single' do
     puts session.inspect
     @name = params[:player_name]
   	session[:single] = params[:player_name]
+  	erb :game 
+  end
+
+  post '/register_versus' do
+    puts session.inspect
     @name1 = params[:player_1_name]
     @name2 = params[:player_2_name]
     session[:versus] = []
-    session[:versus] = [:player_1_name, :player_2_name]
-    # session[:versus] = params[:player_1_name]
-    # session[:versus] = params[:player_2_name]
-  	erb :game 
+    session[:versus] = [@name1, @name2]
+    erb :game
   end
+
 
 
 

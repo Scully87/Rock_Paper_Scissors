@@ -1,11 +1,13 @@
-# class Player
+class Player
 
-# 	def intialize(name = "OsX")
-# 		@name = name
-# 		@picked = false
-# 	end
+  def initialize(name: 'Defualt Name')
+  	@name = name
+  end
 
-# 	attr_reader :name, :pick
+  attr_reader :name
 
+  player = Player.new
 
-# end
+  p player
+
+end
