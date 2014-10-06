@@ -1,28 +1,66 @@
-class Game
+class Game 
 
- 	def intialize
-	  @player_one = nil
-	  @player_two = nil  
+	def initialize(players = [])
+		@players = players
+		set_players
 	end
 
-	def players
-	  [@player_one, @player_two]
+	BEATS = { 	scissors: :paper,
+				paper: :rock,
+				rock: :lizard,
+				lizard: :spock,
+				spock: :scissors,
+				scissors: :lizard,
+				lizard: :paper,
+				paper: :spock,
+				spock: :rock,
+				rock: :scissors
+		 		 }
+
+	attr_reader :players, :player1, :player2
+
+	def set_players
+		@player1 = players.first
+		@player2 = players.last
 	end
 
-	def add_player(player)
-      return @player_two = player unless has_player?
-		     @player_one = player
+	def winner
+		set_players
+		return "Draw" if player1.pick == player2.pick
+		return player1  if BEATS[normalize(player1.pick)] == normalize(player2.pick)
+		player2
 	end
 
-	def has_player?
-	  @player_one.nil?
+	def normalize(pick)
+		pick.downcase.to_sym
 	end
 
-# game = Game.new
-# p game
-# game.add_player :Tim
-# p game
-# game.add_player :John
-# p game
-# p game.players
+	def player_count
+		players.count
+	end
+
+	def has_players?
+		players.any?
+	end
+
+	def add player
+		players << player unless has_enough_players?
+		self
+	end
+
+	def select_player_called name
+		players.select{ |player| player.name == name }.first
+	end
+
+	def select_opponent_of name
+		players.reject{ |player| player.name == name }.first
+	end
+
+	def has_enough_players?
+		player_count == 2
+	end
+
+	def reset
+		@players = []
+	end
 end

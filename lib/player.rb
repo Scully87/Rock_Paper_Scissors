@@ -1,13 +1,31 @@
 class Player
 
-  def initialize(name: 'Defualt Name')
+  def initialize(name = "Computer")
   	@name = name
+  	@picked = false
   end
 
-  attr_reader :name
+  attr_reader :name, :pick
 
-  player = Player.new
+  def pick=(value)
+    @pick = value
+	@picked = true
+	self
+  end
 
-  p player
+  def random_pick
+	@pick = ["Paper", "Rock", "Scissors", "Lizard", "Spock"].sample
+	@picked = true
+	self
+  end
+
+  def has_picked?
+	@picked
+  end
+
+  def reset_pick
+	@picked = false
+	@pick = nil
+  end
 
 end

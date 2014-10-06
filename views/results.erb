@@ -1,0 +1,13 @@
+.....AND THE WINNER IS :
+<% if GAME.winner == "Draw" %>
+	<h2> It was a draw, you and <%= @opponent.name %> both picked <%= @player.pick %></h2>
+<% elsif GAME.winner.name == @player.name %>
+	<h2> <%= @player.name.capitalize %> </h2>
+	<h2>You beat <%= @opponent.name %>! <%= @player.pick %> beats <%= @opponent.pick %></h2>
+<% else %>
+	<h2> <%= @opponent.name.capitalize %></h2>
+	<h2> You lost to <%= @opponent.name %>! <%= @player.pick %> lost to <%= @opponent.pick %> </h2>
+<%end%>
+
+<a class="button" href="/play_again">Play Again?</a>
+<a class="button" href="/game_over">Give up!</a>
