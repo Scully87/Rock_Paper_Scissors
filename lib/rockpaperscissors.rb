@@ -22,15 +22,15 @@ class RockPaperScissors < Sinatra::Base
     p session.inspect
     session[:player] = Player.new(params[:name])
     GAME.add session[:player]
-    GAME.add computer if single_player_mode?
-    redirect to '/play_game' if single_player_mode? || GAME.has_enough_players?
-    redirect to '/waiting'
+    GAME.add computer #if single_player_mode?
+    redirect to '/play_game' #if  GAME.has_enough_players? #single_player_mode? ||
+    #redirect to '/waiting'
   end
 
-  get '/waiting' do
-    redirect to '/play' if GAME.has_enough_players?
-    erb :waiting
-  end
+  # get '/waiting' do
+  #   redirect to '/play' if GAME.has_enough_players?
+  #   erb :waiting
+  # end
 
   get '/play_game' do
     p session.inspect
@@ -51,7 +51,7 @@ class RockPaperScissors < Sinatra::Base
   get '/waiting_on_opponent' do
     @opponent = GAME.select_opponent_of session[:player].name
     redirect to '/results' if @opponent.has_picked?
-    erb :opponent_pick
+    #erb :opponent_pick
   end
 
   get '/results' do
@@ -67,15 +67,15 @@ class RockPaperScissors < Sinatra::Base
     @opponent = GAME.select_opponent_of session[:player].name
     @player.reset_pick
     redirect to '/play_game' if !@opponent.has_picked? || single_player_mode?
-    redirect to '/waiting_to_play'
+    #redirect to '/waiting_to_play'
   end
 
-  get '/waiting_to_play' do
-    @opponent = GAME.select_opponent_of session[:player].name
-    redirect to '/' unless GAME.has_enough_players?
-    redirect to '/play_game' unless @opponent.has_picked?
-    erb :waiting_to_play
-  end
+  # get '/waiting_to_play' do
+  #   @opponent = GAME.select_opponent_of session[:player].name
+  #   redirect to '/' unless GAME.has_enough_players?
+  #   redirect to '/play_game' unless @opponent.has_picked?
+  #   #erb :waiting_to_play
+  # end
 
   get '/game_over' do
     p session.inspect

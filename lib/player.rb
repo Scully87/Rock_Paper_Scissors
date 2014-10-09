@@ -9,23 +9,23 @@ class Player
 
   def pick=(value)
     @pick = value
-	@picked = true
-	self
+	  @picked = true
+	  self
   end
 
   def random_pick
-	@pick = ["Paper", "Rock", "Scissors", "Lizard", "Spock"].sample
-	@picked = true
-	self
+	  @pick = ["Paper", "Rock", "Scissors", "Lizard", "Spock"].sample
+	  @picked = true
+	  self
   end
 
   def has_picked?
-	@picked
+	  @picked
   end
 
   def reset_pick
-	@picked = false
-	@pick = nil
+	  @picked = false
+	  @pick = nil
   end
 
 end
