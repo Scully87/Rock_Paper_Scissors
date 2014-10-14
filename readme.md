@@ -1,5 +1,5 @@
 =======================================================================================
-<h3>The task is to create a Rock,Paper,Scissors game to be playable on the web.</h3>
+<h3>The task is to create a Rock,Paper,Scissors game to be playable on the web locally using Sinatra.</h3>
 
 <strong>The game will contain the following features :</strong>
   
