@@ -5,7 +5,8 @@
   
   ~ The player has to enter their name before the game
 
-  ~ The player will be presented the choices(rock,paper,scissors)
+  ~ The player will be presented the choices(rock,paper,scissors,
+  	lizard,spock)
 
   ~ The player can choose one option
 
@@ -13,26 +14,18 @@
   
   ~ A winner will be declared
 
------------------------------------------------
-=========== Bonus 1: Multiplayer ==============
------------------------------------------------
- 
-Change the game so that two players can face each other
-
--------------------------------------------------
-=== Bonus 2: Rock,Paper,Scissors,Spock,Lizard ===
--------------------------------------------------
-
-Use the <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock">special rules</a>
-
 ----------------------------------------------
-============== Basic Rules ===================
+============== Special Rules ===================
 ----------------------------------------------
  
-  ~ Rock beats Scissors
-
-  ~ Scissors beats Paper
-
-  ~ Paper beats Rock
-
+	- paper beats rock,
+	- rock beats lizard,
+	- lizard beats spock,
+	- spock beats scissors,
+	- scissors beats lizard,
+	- lizard beats paper,
+	- paper beats spock,
+	- spock beats rock,
+	- rock beats scissors
+	
 =======================================================================================

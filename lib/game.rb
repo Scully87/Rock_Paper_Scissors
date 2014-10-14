@@ -2,26 +2,25 @@ class Game
 
 	def initialize(players = [])
 		@players = players
-		set_players
 	end
 
-	BEATS = { 	scissors: :paper,
-				paper: :rock,
-				rock: :lizard,
-				lizard: :spock,
-				spock: :scissors,
-				scissors: :lizard,
-				lizard: :paper,
-				paper: :spock,
-				spock: :rock,
-				rock: :scissors
-		 		 }
+	BEATS = { scissors: :paper,
+						paper: :rock,
+						rock: :lizard,
+						lizard: :spock,
+						spock: :scissors,
+						scissors: :lizard,
+						lizard: :paper,
+						paper: :spock,
+						spock: :rock,
+						rock: :scissors
+		 		 	}
 
 	attr_reader :players, :player1, :player2
 
 	def set_players
-		@player1 = players.first
-		@player2 = players.last
+		@player1 = players.at(0)
+		@player2 = players.at(1)
 	end
 
 	def winner
@@ -43,17 +42,17 @@ class Game
 		players.any?
 	end
 
-	def add player
+	def add(player)
 		players << player unless has_enough_players?
 		self
 	end
 
-	def select_player_called name
-		players.select{ |player| player.name == name }.first
+	def select_player_called(name)
+		players.select{ |player| player.name == name }.at(0)
 	end
 
-	def select_opponent_of name
-		players.reject{ |player| player.name == name }.first
+	def select_opponent_of(name)
+		players.reject{ |player| player.name == name }.at(0)
 	end
 
 	def has_enough_players?
