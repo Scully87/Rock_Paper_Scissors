@@ -56,4 +56,3 @@ in broswer open: http://localhost:9292
 
  - [Pokémon_game](https://www.github.com/scully87/Pokemon-game) in Javascript
  - [Rock, Paper, Scissors](https://www.github.com/Scully87/RockPaperScissors_Javascript) in Javascript
-rack
