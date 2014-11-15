@@ -1,10 +1,12 @@
 require 'sinatra/base'
-require_relative 'player'
-require_relative 'game'
+require './lib/player'
+require './lib/game'
+require 'sinatra/partial'
 
 class RockPaperScissors < Sinatra::Base
-  set :views, Proc.new { File.join(root, "..", "views")}
+  set :views, Proc.new { File.join(root, "..", "app/views")}
   enable :sessions
+  set :partial_template_engine, :erb
 
   GAME = Game.new
 
